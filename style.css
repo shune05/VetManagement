@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f8f9;
+    color: #333;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00aaff; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #0077cc;
+    border-bottom: 2px solid #0077cc;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #e0f7fa; 
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #0077cc;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Form (Đăng nhập, Đăng ký, Thông tin) --- */
+.form-container {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container img {
+    display: block;
+    width: 80px;
+    margin: 0 auto 20px auto;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+.form-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.form-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.service-item {
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.service-item h3 {
+    margin: 0;
+    color: #0077cc;
+}
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.calendar-table th,
+.calendar-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.calendar-table th {
+    background-color: #f2f2f2;
+}
+
+.calendar-table .not-available {
+    background-color: #fde0e0;
+    color: #a00;
+    font-weight: bold;
+}
+
+.calendar-table .available {
+    background-color: #e0fde0;
+    color: #0a0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none; 
+    }
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    
+    table-layout: fixed; 
+    box-sizing: border-box;
+}
+
+.calendar-table th:first-child,
+.calendar-table td:first-child {
+    width: 16%; 
+}
+
+.calendar-table th,
+.calendar-table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    height: 60px; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.calendar-table th {
+    background-color: #f2f2f2;
+    padding: 10px; 
+}
+
+.calendar-table td.not-available {
+    background-color: #fde0e0;
+    color: #a00;
+    font-weight: bold;
+    padding: 10px; 
+}
+
+.calendar-table td a.available-slot {
+    display: block; 
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: transparent;
+    box-sizing: border-box;
+    transition: background-color 0.2s; 
+}
+
+.calendar-table td a.available-slot:hover {
+    background-color: #e0fde0; 
+    cursor: pointer;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Simpson Clinic</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="information.html">Information</a></li>
+            <li><a href="booking.html" class="active">Booking</a></li> 
+        </ul>
+    </nav>
+
+    <div class="container" style="max-width: 600px;">
+        
+        <h2>Fill in the appointment information</h2>
+        <p>Please fill out the information below to confirm your appointment.</p>
+        
+        <form class="form-container" style="padding: 0; box-shadow: none; margin: 20px 0;">
+            <div class="form-group">
+                <label for="book-id">ID:</label>
+                <input type="text" id="book-id" name="book-id">
+            </div>
+            <div class="form-group">
+                <label for="book-name">Name:</label>
+                <input type="text" id="book-name" name="book-name">
+            </div>
+            <div class="form-group">
+                <label for="book-pet">Pet:</label>
+                <input type="text" id="book-pet" name="book-pet">
+            </div>
+            
+            <div class="form-group">
+                <label for="book-service">Choose service:</label>
+                <select id="book-service" name="book-service" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; background-color: white; height: 46px; box-sizing: border-box;">
+                    <option value="">-- Please choose --</option>
+                    <option value="kham-suc-khoe">Medical check-up</option>
+                    <option value="tiem-vaccine">Vaccination</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="book-phone">Phone number:</label>
+                <input type="text" id="book-phone" name="book-phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="book-note">Note:</label>
+                <textarea id="book-note" name="book-note" rows="4"></textarea>
+            </div>
+            
+            <button type="submit">Confirm</button>
+        </form>
+    </div>
+
+</body>
+</html>
